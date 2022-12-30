@@ -1,35 +1,94 @@
+$menuHeight: 60px;
+$menuBreakPoint: 600px;
+$navBackgroundColor: #6b6a6a;
+$textColor: #cacaca;
+
 nav {
-  background-color: #6b6a6a;
-  padding: 20px;
+  background-color: $navBackgroundColor;
+  box-shadow: 0 2px 10 px rgba(218, 218, 218, 0.12);
   position: fixed;
-  top: 0;
   width: 100%;
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .home {
+      padding: 0 20px;
+      text-decoration: none;
+      font-size: 1.25rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $textColor;
+      font-family: "MontSerrat", "Franklin Gothic Medium", "Arial Narrow", Arial,
+        sans-serif;
+      cursor: pointer;
+    }
+  }
 }
 
-ul {
-  list-style-type: none;
-}
-
-nav a,
-i {
-  margin: 20px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #cacaca;
-  font-family: 'MontSerrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+.burguer {
+  padding: 0 20px;
+  border-left: 1px solid $textColor;
+  display: none;
   cursor: pointer;
+
+  i {
+    color: $textColor;
+    line-height: $menuHeight;
+  }
+  @media (max-width: $menuBreakPoint) {
+    display: block;
+  }
 }
-nav > ul{
+
+.menu {
   display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-  width: 70%;
-  margin: auto;
+  align-items: center;
+  @media (max-width: $menuBreakPoint) {
+    display: none;
+
+    &.is-open {
+      display: block;
+      position: absolute;
+      top: #{$menuHeight + 1};
+      background: $navBackgroundColor;
+      width: 100%;
+      .menu-item {
+        border-bottom: 1px solid $textColor;
+      }
+    }
+  }
+  .menu-item {
+    padding: 0 20px;
+    height: $menuHeight;
+    line-height: $menuHeight;
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: $textColor;
+    font-family: "MontSerrat", "Franklin Gothic Medium", "Arial Narrow", Arial,
+      sans-serif;
+    cursor: pointer;
+    @media (max-width: $menuBreakPoint) {
+      height: 40px;
+      line-height: 40px;
+    }
+  }
+}
+
+.gamb {
+  height: $menuHeight;
 }
 
 .content {
   justify-content: center;
   align-content: center;
-  width: 70%;
-  margin: auto;
+  text-align: center;
 }

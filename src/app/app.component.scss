@@ -1,0 +1,35 @@
+nav {
+  background-color: #6b6a6a;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav a,
+i {
+  margin: 20px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #cacaca;
+  font-family: 'MontSerrat', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  cursor: pointer;
+}
+nav > ul{
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+  width: 70%;
+  margin: auto;
+}
+
+.content {
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+  margin: auto;
+}

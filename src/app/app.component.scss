@@ -24,9 +24,7 @@ nav {
       font-weight: 700;
       text-transform: uppercase;
       color: $textColor;
-      font-family: "MontSerrat", "Franklin Gothic Medium", "Arial Narrow", Arial,
-        sans-serif;
-      cursor: pointer;
+
     }
   }
 }
@@ -73,8 +71,6 @@ nav {
     font-size: 1rem;
     font-weight: 700;
     color: $textColor;
-    font-family: "MontSerrat", "Franklin Gothic Medium", "Arial Narrow", Arial,
-      sans-serif;
     cursor: pointer;
     @media (max-width: $menuBreakPoint) {
       height: 40px;
@@ -88,7 +84,13 @@ nav {
 }
 
 .content {
+  word-wrap: break-word;
+  padding: 0 15%;
   justify-content: center;
   align-content: center;
   text-align: center;
+
+  @media (max-width: $menuBreakPoint) {
+   padding: 0 5%;
+  }
 }

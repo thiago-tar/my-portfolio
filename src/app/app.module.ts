@@ -7,6 +7,7 @@ import { HomeComponent } from './portfolio/home/home.component';
 import { ContactComponent } from './portfolio/contact/contact.component';
 import { ExperienceComponent } from './portfolio/experience/experience.component';
 import { AboutComponent } from './portfolio/about/about.component';
+import { ClickOutsideDirective } from './directives/clickOutsideDirective';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { AboutComponent } from './portfolio/about/about.component';
     HomeComponent,
     ContactComponent,
     ExperienceComponent,
-    AboutComponent
+    AboutComponent,
+    ClickOutsideDirective
   ],
   imports: [
     BrowserModule,

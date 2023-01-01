@@ -17,14 +17,11 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-
-
     .homeLi {
       display: flex;
       align-items: center;
 
       .home {
-
         padding: 0 20px;
         text-decoration: none;
         font-size: 1.25rem;
@@ -33,8 +30,13 @@ nav {
         color: $textColor;
         height: $menuHeight;
         line-height: $menuHeight;
+
+        @media (max-width: $menuBreakPoint) {
+          font-size: 1rem;
+          font-weight: 400;
+        }
       }
-      :hover{
+      :hover {
         background-color: white;
         color: black;
       }
@@ -88,10 +90,12 @@ nav {
     @media (max-width: $menuBreakPoint) {
       height: 40px;
       line-height: 40px;
+      font-size: 0.9rem;
+      font-weight: 400;
     }
   }
 
-  :hover{
+  :hover {
     background-color: white;
     color: black;
   }
@@ -104,10 +108,12 @@ nav {
 .active {
   // background-color: rgb(224, 224, 224);
 
-  background-color: rgb(250, 222, 199);
+  background-color: rgb(80, 80, 79);
 }
 
-#home, #aboutme, #contact {
+#home,
+#aboutme,
+#contact {
   word-wrap: break-word;
   padding: 0 15%;
   justify-content: center;
@@ -120,7 +126,6 @@ nav {
 }
 
 #home {
-
 }
 
 #aboutme {

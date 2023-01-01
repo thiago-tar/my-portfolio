@@ -4,10 +4,10 @@
       <a id="homeBtn" class="home active" (click)="scrollTo('home')">Thiago Rodrigues</a>
     </li>
 
-    <li class="burguer" (click)="toogleMenu()">
+    <li (clickOutside)="closeMenu()"  class="burguer" (click)="toogleMenu()">
       <i class="material-icons">{{isMenuOpen ? "close" : "menu"}}</i>
     </li>
-    <li class="menu" [class.is-open]="isMenuOpen">
+    <li  class="menu" [class.is-open]="isMenuOpen">
       <a id="aboutBtn" class="menu-item" (click)="scrollTo('aboutme')">About me</a>
       <a id="contactBtn" class="menu-item" (click)="scrollTo('contact')">Contact</a>
     </li>
@@ -15,16 +15,15 @@
 </nav>
 
 <div class="content" role="main">
+  <section id="home">
+      <div class="gamb"></div>
+      <app-home></app-home>
+  </section>
+  <section id="aboutme">
+      <app-about></app-about>
+  </section>
+  <section id="contact">
+      <app-contact></app-contact>
+  </section>
 
-  <div id="home">
-    <div class="gamb"></div>
-    <app-home></app-home>
-  </div>
-
-  <div id="aboutme">
-    <app-about></app-about>
-  </div>
-  <div id="contact">
-    <app-contact></app-contact>
-  </div>
 </div>

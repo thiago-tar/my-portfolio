@@ -1,7 +1,4 @@
-$menuHeight: 60px;
-$menuBreakPoint: 600px;
-$navBackgroundColor: #6b6a6a;
-$textColor: #cacaca;
+@import '../css/myvariables';
 
 nav {
   background-color: $navBackgroundColor;
@@ -106,8 +103,6 @@ nav {
 }
 
 .active {
-  // background-color: rgb(224, 224, 224);
-
   background-color: rgb(80, 80, 79);
 }
 

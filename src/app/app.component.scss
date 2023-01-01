@@ -17,14 +17,27 @@ nav {
     justify-content: space-between;
     align-items: center;
 
-    .home {
-      padding: 0 20px;
-      text-decoration: none;
-      font-size: 1.25rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: $textColor;
 
+
+    .homeLi {
+      display: flex;
+      align-items: center;
+
+      .home {
+
+        padding: 0 20px;
+        text-decoration: none;
+        font-size: 1.25rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $textColor;
+        height: $menuHeight;
+        line-height: $menuHeight;
+      }
+      :hover{
+        background-color: white;
+        color: black;
+      }
     }
   }
 }
@@ -77,13 +90,24 @@ nav {
       line-height: 40px;
     }
   }
+
+  :hover{
+    background-color: white;
+    color: black;
+  }
 }
 
 .gamb {
   height: $menuHeight;
 }
 
-.content {
+.active {
+  // background-color: rgb(224, 224, 224);
+
+  background-color: rgb(250, 222, 199);
+}
+
+#home, #aboutme, #contact {
   word-wrap: break-word;
   padding: 0 15%;
   justify-content: center;
@@ -91,6 +115,18 @@ nav {
   text-align: center;
 
   @media (max-width: $menuBreakPoint) {
-   padding: 0 5%;
+    padding: 0 5%;
   }
+}
+
+#home {
+
+}
+
+#aboutme {
+  background-color: rgb(60, 60, 60);
+}
+
+#contact {
+  background-color: rgb(40, 40, 40);
 }

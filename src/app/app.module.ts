@@ -8,6 +8,7 @@ import { ContactComponent } from './portfolio/contact/contact.component';
 import { ExperienceComponent } from './portfolio/experience/experience.component';
 import { AboutComponent } from './portfolio/about/about.component';
 import { ClickOutsideDirective } from './directives/clickOutsideDirective';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { ClickOutsideDirective } from './directives/clickOutsideDirective';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

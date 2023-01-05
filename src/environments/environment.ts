@@ -3,9 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false,
-  emailAPI_AUTH_TOKEN: "Gc+oWKg0lEKWpfkkRjcn7w==",
-  emailAPI_URL: "http://localhost:3000/"
+  production: false
 };
 
 /*

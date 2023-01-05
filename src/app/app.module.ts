@@ -11,6 +11,8 @@ import { ClickOutsideDirective } from './directives/clickOutsideDirective';
 import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { EmailApiService } from './services/email-api.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { EmailApiService } from './services/email-api.service';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot()
   ],
   providers: [EmailApiService],
   bootstrap: [AppComponent]

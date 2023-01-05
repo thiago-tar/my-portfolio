@@ -8,8 +8,9 @@ import { ContactComponent } from './portfolio/contact/contact.component';
 import { ExperienceComponent } from './portfolio/experience/experience.component';
 import { AboutComponent } from './portfolio/about/about.component';
 import { ClickOutsideDirective } from './directives/clickOutsideDirective';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import {  FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import { EmailApiService } from './services/email-api.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,9 +24,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [EmailApiService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

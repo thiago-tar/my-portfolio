@@ -1,0 +1,110 @@
+@import "../../../css/myvariables";
+
+h2 {
+  padding: 50px 20px 10 20px;
+  @media (max-width: $menuBreakPoint) {
+    padding: 20px 0px 5px 0px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+.about-div {
+  display: inline;
+  justify-content: center;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $menuBreakPoint) {
+    display: inline;
+    justify-content: center;
+  }
+}
+
+.column {
+  margin: 20px 0;
+  width: 49%;
+  background-color: rgb(40, 40, 40);
+  border: 2px solid rgba(202, 202, 202);
+  border-radius: 20px 20px 20px 20px;
+  align-items: center;
+
+  @media (max-width: $menuBreakPoint) {
+    width: 100%;
+  }
+
+  .header-class{
+    margin: 0;
+    padding: 5px;
+    vertical-align: middle;
+    background-color: rgb(73, 73, 73);
+    border-radius: 20px 20px 0 0;
+    border-bottom: 2px solid rgba(202, 202, 202);
+    h6{
+      margin: 0;
+    }
+  }
+
+  div {
+    margin: 0;
+    border-radius: 0 0 20px 20px;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    padding: 5px;
+    .data{
+      display: flex;
+
+      .icon{
+        width: 30%;
+        border-radius: 0;
+        justify-content: center;
+        img{
+          float: right;
+          width: 26px;
+        }
+      }
+
+      .info {
+        width: 70%;
+      }
+    }
+  }
+}
+
+.gradiente-line-gray-li-border {
+  margin: 0;
+  padding: 0 ;
+  hr {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0),
+      rgba(202, 202, 202),
+      rgba(0, 0, 0, 0)
+    );
+  }
+}
+
+.gradiente-line-gray {
+  padding: 0 0 10px 0;
+}
+// /* Clear floats after the columns */
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+// }

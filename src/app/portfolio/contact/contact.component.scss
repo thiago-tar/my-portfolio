@@ -72,3 +72,10 @@ a {
     }
   }
 }
+
+h2{
+  padding: 50px 20px 10 20px;
+  @media (max-width: $menuBreakPoint) {
+    padding: 20px 0px 5px 0px;
+  }
+}

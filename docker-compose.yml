@@ -5,8 +5,6 @@ services:
     container_name: PortfolioContainer
     ports:
       - "3000:4200"
-    extra_hosts:
-      - "127.0.0.1:0.0.0.0"
     volumes:
       - "/app/node_modules"
       - ".:/app"

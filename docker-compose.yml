@@ -1,10 +1,10 @@
-version: '3.9'
+version: '3'
 services:
   portfoliofrontend:
     build: .
     container_name: PortfolioContainer
     ports:
-      - "3000:4200"
+      - "8080:4200"
     volumes:
       - "/app/node_modules"
       - ".:/app"

@@ -1,0 +1,16 @@
+[Unit]
+Description=Portfolio
+After=multi-user.target
+
+[Service]
+ExecStart=/home/ec2-user/deploy/front/portfolio/scripts/start.sh
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=Portfolio
+User=ec2-user
+
+
+[Install]
+WantedBy=multi-user.target

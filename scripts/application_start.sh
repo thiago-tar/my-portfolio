@@ -8,7 +8,8 @@ cd /home/ec2-user/deploy/front/portfolio
 
 sudo mv /home/ec2-user/deploy/front/portfolio/scripts/Portfolio.service /etc/systemd/system/Portfolio.service
 #install node modules
-# echo "NPM START"
+echo "NPM START"
+npm install
 #start our node app in the background
 # node ./src/server.js > app.out.log 2> app.err.log < /dev/null &
 sudo systemctl enable Portfolio.service

@@ -13,6 +13,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { EmailApiService } from './services/email-api.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { ProjectComponent } from './portfolio/project/project.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { ToastrModule } from 'ngx-toastr';
     ContactComponent,
     ExperienceComponent,
     AboutComponent,
-    ClickOutsideDirective
+    ClickOutsideDirective,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

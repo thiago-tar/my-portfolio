@@ -108,7 +108,8 @@ nav {
 
 #home,
 #aboutme,
-#contact {
+#contact,
+#project {
   word-wrap: break-word;
   padding: 0 15%;
   justify-content: center;
@@ -124,6 +125,10 @@ nav {
 
 #aboutme {
   background-color: rgb(60, 60, 60);
+}
+
+#project {
+  background-color: rgb(50, 50, 50);
 }
 
 #contact {

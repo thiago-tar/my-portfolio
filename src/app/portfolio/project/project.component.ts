@@ -1,9 +1,7 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef,
-  OnInit,
-  Renderer2,
+  ElementRef
 } from '@angular/core';
 
 @Component({
@@ -12,7 +10,8 @@ import {
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent implements AfterViewInit {
-  constructor(private renderer: Renderer2, private elem: ElementRef) {}
+
+  constructor(private elem: ElementRef) {}
 
   ngAfterViewInit(): void {
     const galleryControls: string[] = ['previous', 'next'];
@@ -24,13 +23,17 @@ export class ProjectComponent implements AfterViewInit {
       '.gallery-item'
     ) as HTMLElement[];
 
+    const aux = this.elem.nativeElement.querySelector('#gallery-aux') as HTMLElement;
+
     var carousel = new Carousel(
       galleryItems,
       galleryControls,
-      galleryControlsContainer
+      galleryControlsContainer,
+      aux
     );
     carousel.setControls();
     carousel.useControls();
+    carousel.updateGallery();
   }
 }
 
@@ -38,15 +41,18 @@ class Carousel {
   private CarouselControls: string[];
   private CarouselArray: HTMLElement[];
   private GalleryControlContainer: Element;
+  private GalleryAux: Element;
 
   constructor(
     items: HTMLElement[],
     controls: string[],
-    galleryControl: HTMLElement
+    galleryControl: HTMLElement,
+    aux: HTMLElement,
   ) {
     this.CarouselControls = controls;
     this.CarouselArray = [...items];
     this.GalleryControlContainer = galleryControl;
+    this.GalleryAux = aux;
   }
 
   updateGallery() {
@@ -56,10 +62,15 @@ class Carousel {
       el.classList.remove('gallery-item-3');
       el.classList.remove('gallery-item-4');
       el.classList.remove('gallery-item-5');
+      el.classList.remove('selected');
     });
 
     this.CarouselArray.slice(0, 5).forEach((el, i) => {
       el.classList.add(`gallery-item-${i + 1}`);
+      if(i + 1 == 3){
+        el.classList.add(`selected`);
+        this.GalleryAux.textContent = el.attributes.getNamedItem('alt')?.textContent ?? '';
+      }
     });
   }
 

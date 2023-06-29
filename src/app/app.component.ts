@@ -37,11 +37,13 @@ export class AppComponent {
     var home = document.getElementById('home')!;
     var aboutme = document.getElementById('aboutme')!;
     var contact = document.getElementById('contact')!;
+    var project = document.getElementById('project')!;
 
     var windowScrollPosition = window.scrollY + 0;
 
     var homeOffSetTop = home.offsetTop - this.menuScroll;
     var aboutmeOffSetTop = aboutme.offsetTop - this.menuScroll;
+    var projectOffSetTop = project.offsetTop - this.menuScroll;
     var contactOffSetTop = contact.offsetTop - this.menuScroll;
 
     if (windowScrollPosition < aboutmeOffSetTop) {
@@ -53,9 +55,14 @@ export class AppComponent {
       this.activeClass('contactBtn');
     } else if (
       windowScrollPosition >= aboutmeOffSetTop &&
-      windowScrollPosition < contactOffSetTop
+      windowScrollPosition < projectOffSetTop
     ) {
       this.activeClass('aboutBtn');
+    } else if (
+      windowScrollPosition >= projectOffSetTop &&
+      windowScrollPosition < contactOffSetTop
+    ) {
+      this.activeClass('projectBtn');
     } else {
       this.activeClass('contactBtn');
     }
@@ -65,7 +72,9 @@ export class AppComponent {
     var $homeBtn = $('#homeBtn');
     var $aboutBtn = $('#aboutBtn');
     var $contactBtn = $('#contactBtn');
+    var $projectBtn = $('#projectBtn');
 
+    $projectBtn.removeClass('active');
     $homeBtn.removeClass('active');
     $aboutBtn.removeClass('active');
     $contactBtn.removeClass('active');

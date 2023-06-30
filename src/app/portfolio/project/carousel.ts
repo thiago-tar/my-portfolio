@@ -1,16 +1,13 @@
 export class Carousel {
-  private CarouselControls: string[];
   private CarouselArray: HTMLElement[];
   private GalleryControlContainer: Element;
   private GalleryAux: Element;
 
   constructor(
     items: HTMLElement[],
-    controls: string[],
     galleryControl: HTMLElement,
     aux: HTMLElement,
   ) {
-    this.CarouselControls = controls;
     this.CarouselArray = [...items];
     this.GalleryControlContainer = galleryControl;
     this.GalleryAux = aux;
@@ -43,17 +40,6 @@ export class Carousel {
 
     this.updateGallery();
   }
-
-  setControls() {
-    this.CarouselControls.forEach((control) => {
-      this.GalleryControlContainer.appendChild(this.CreateControl(control));
-      var con = document.querySelector(
-        `.gallery-controls-${control}`
-      ) as HTMLElement;
-      con.innerText = control;
-    });
-  }
-
   useControls() {
     this.GalleryControlContainer.childNodes.forEach((control) => {
       control.addEventListener('click', (e) => {

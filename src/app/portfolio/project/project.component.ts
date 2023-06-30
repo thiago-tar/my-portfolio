@@ -15,8 +15,6 @@ export class ProjectComponent implements AfterViewInit {
   constructor(private elem: ElementRef) {}
 
   ngAfterViewInit(): void {
-    const galleryControls: string[] = ['previous', 'next'];
-
     const galleryControlsContainer = this.elem.nativeElement.querySelector(
       '.gallery-controls'
     ) as HTMLElement;
@@ -28,11 +26,9 @@ export class ProjectComponent implements AfterViewInit {
 
     var carousel = new Carousel(
       galleryItems,
-      galleryControls,
       galleryControlsContainer,
       aux
     );
-    carousel.setControls();
     carousel.useControls();
     carousel.updateGallery();
   }

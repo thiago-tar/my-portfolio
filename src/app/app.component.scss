@@ -27,6 +27,7 @@ nav {
         color: $textColor;
         height: $menuHeight;
         line-height: $menuHeight;
+        transition: background-color 0.4s, color 0.4s;
         cursor: pointer;
         @media (max-width: $menuBreakPoint) {
           font-size: 1rem;
@@ -84,6 +85,7 @@ nav {
     font-weight: 700;
     color: $textColor;
     cursor: pointer;
+    transition: background-color 0.4s, color 0.4s;
     @media (max-width: $menuBreakPoint) {
       height: 40px;
       line-height: 40px;

@@ -3,13 +3,9 @@
   <div class="gallery">
     <h4 id="gallery-aux"></h4>
     <div class="gallery-container">
-      <img src="assets/images/imagem-1.jpg" alt="carro 1" class="gallery-item gallery-item-1" data-index="1">
-      <img src="assets/images/imagem-2.jpg" alt="carro 2" class="gallery-item gallery-item-2" data-index="2">
-      <img src="assets/images/imagem-3.jpg" alt="carro 3" class="gallery-item gallery-item-3" data-index="3">
-      <img src="assets/images/imagem-4.jpg" alt="carro 4" class="gallery-item gallery-item-4" data-index="4">
-      <img src="assets/images/imagem-5.jpg" alt="carro 5" class="gallery-item gallery-item-5" data-index="5">
-      <img src="assets/images/imagem-6.jpg" alt="carro 6" class="gallery-item" data-index="6">
-      <img src="assets/images/imagem-7.jpg" alt="carro 7" class="gallery-item" data-index="7">
+      <img *ngFor="let image of Imagens; let i = index" class="gallery-item"  src={{image.path}} alt={{image.alt}} [attr.data-index]="i" >
+
+      <!-- class={{image.getClass(i)}} -->
     </div>
     <div class="gallery-controls">
       <button class="gallery-controls-previous">previous</button>

@@ -4,6 +4,7 @@ import {
   ElementRef
 } from '@angular/core';
 import { Carousel } from './carousel';
+import { Image } from './image';
 
 @Component({
   selector: 'app-project',
@@ -11,6 +12,8 @@ import { Carousel } from './carousel';
   styleUrls: ['./project.component.scss'],
 })
 export class ProjectComponent implements AfterViewInit {
+
+  Imagens: Array<Image> = Image.GetImage();
 
   constructor(private elem: ElementRef) {}
 

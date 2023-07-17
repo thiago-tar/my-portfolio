@@ -3,7 +3,7 @@ Description=Portfolio
 After=multi-user.target
 
 [Service]
-Type=forking
+Type=simple
 ExecStart=/home/ec2-user/deploy/front/portfolio/scripts/start.sh
 Restart=always
 RestartSec=10

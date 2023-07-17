@@ -1,9 +1,9 @@
 #!/bin/bash
 echo "start"
 cd /home/ec2-user/deploy/front/portfolio
+pwd
 echo "start 2"
-sudo npm --v
-sudo npm rum generate-env
+npm rum generate-env
 echo "generate-env"
-sudo ng build
+ng build
 echo "build complete"
